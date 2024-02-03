@@ -1,0 +1,5 @@
+sabse pehle npm concurrently karke package install kro
+taaki dono backend aur front end sath me run kar ske phir
+react wale file me package.json me jaao aur scripts me
+"both": "concurrently \"npm run start\" \"nodemon backend/index.js\"" daalo
+isse npm run both krne pe dono backend aur frontend sath me run krenge
