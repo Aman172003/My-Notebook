@@ -1,5 +1,9 @@
-sabse pehle npm concurrently karke package install kro
+1.sabse pehle npm concurrently karke package install kro
 taaki dono backend aur front end sath me run kar ske phir
 react wale file me package.json me jaao aur scripts me
 "both": "concurrently \"npm run start\" \"nodemon backend/index.js\"" daalo
 isse npm run both krne pe dono backend aur frontend sath me run krenge
+
+2. jab koi state kisi component me chahiye hota hai to hum as a prop bhejte hai fromm App.js
+Agar humara App thoda complex hai aur nested component hai to humko props har component se bhejna hoga jaha required ho
+Isko suljhane ke liye Context Api hai, iske through jis component me humko State chahiye wahi pe bhejenge
