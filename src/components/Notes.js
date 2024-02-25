@@ -64,7 +64,7 @@ const Notes = (props) => {
         ref={ref}
         data-bs-target="#exampleModal"
       >
-        Launch demo modal
+        launch Demo Model
       </button>
 
       <div
