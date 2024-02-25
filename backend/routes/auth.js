@@ -18,7 +18,7 @@ router.post(
   ],
   async (req, res) => {
     let success = false;
-    // if there are are error, return bad request and the error
+    // if there are error, return bad request and the error
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ success, errors: errors.array() });
@@ -103,7 +103,7 @@ router.post(
 // fetchuser ek middleware function hai jo user data ko fetch krega
 router.post("/getUser", fetchuser, async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = req.user._id;
     //   saari fields select kr lenge except pass
     const user = await User.findById(userId).select("-password");
     res.send(user);
