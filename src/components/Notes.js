@@ -163,19 +163,20 @@ const Notes = (props) => {
       <div className="row my-3">
         <h1>Your Notes</h1>
         <div className="container mx-2">
-          {notes.length === 0 && "No Notes to display"}
+          {Array.isArray(notes) && notes.length === 0 && "No Notes to display"}
         </div>
 
-        {notes.map((note) => {
-          return (
-            <Noteitem
-              key={note._id}
-              updateNote={updateNote}
-              showAlert={props.showAlert}
-              note={note}
-            />
-          );
-        })}
+        {Array.isArray(notes) &&
+          notes.map((note) => {
+            return (
+              <Noteitem
+                key={note._id}
+                updateNote={updateNote}
+                showAlert={props.showAlert}
+                note={note}
+              />
+            );
+          })}
       </div>
     </>
   );
